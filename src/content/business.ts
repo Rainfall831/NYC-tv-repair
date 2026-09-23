@@ -1,6 +1,23 @@
 // Business facts. Source of truth: nytechtvrepair.com (contact.html, about.html, payment.html, job.html).
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://nytechtvrepair.com";
+/** Public site origin for metadata, sitemap, and PayPal return URLs. */
+function resolveSiteUrl(): string {
+  const override = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (override) return override.replace(/\/+$/, "");
+
+  if (process.env.VERCEL === "1") {
+    const production = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+    if (process.env.VERCEL_ENV === "production" && production) {
+      return `https://${production.replace(/\/+$/, "")}`;
+    }
+    const deployment = process.env.VERCEL_URL?.trim();
+    if (deployment) return `https://${deployment.replace(/\/+$/, "")}`;
+  }
+
+  return "http://localhost:3000";
+}
+
+export const SITE_URL = resolveSiteUrl();
 
 export const business = {
   legalName: "NY Tech TV Repair, Inc.",

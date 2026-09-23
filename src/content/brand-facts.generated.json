@@ -1,0 +1,177 @@
+{
+  "aiwa": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.aiwa.com",
+    "modelCount": 997
+  },
+  "akai": {
+    "factoryAuthorized": true,
+    "officialUrl": "http://www.akai.com",
+    "modelCount": 59
+  },
+  "apex": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.apexdigitalinc.com",
+    "modelCount": 82
+  },
+  "audiovox": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.audiovox.com",
+    "modelCount": 162
+  },
+  "daewoo": {
+    "factoryAuthorized": true,
+    "officialUrl": "http://www.daewoo.com",
+    "modelCount": 1001
+  },
+  "emerson": {
+    "factoryAuthorized": true,
+    "officialUrl": "http://www.emersonaudiovideo.com/",
+    "modelCount": 9
+  },
+  "fujitsu": {
+    "factoryAuthorized": true,
+    "officialUrl": "http://www.fujitsu.com",
+    "modelCount": 997
+  },
+  "funai": {
+    "factoryAuthorized": true,
+    "officialUrl": "http://www.funai-corp.com/",
+    "modelCount": 200
+  },
+  "ge": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.ge.com",
+    "modelCount": 821
+  },
+  "haier": {
+    "factoryAuthorized": true,
+    "officialUrl": "http://www.haier.com/index.asp",
+    "modelCount": 168
+  },
+  "hitachi": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.hitachi.com",
+    "modelCount": 4249
+  },
+  "insignia": {
+    "factoryAuthorized": false,
+    "officialUrl": "https://www.insigniaproducts.com/",
+    "modelCount": 105
+  },
+  "jvc": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.jvc.com",
+    "modelCount": 993
+  },
+  "lg": {
+    "factoryAuthorized": true,
+    "officialUrl": "http://www.lg.net/index.jsp",
+    "modelCount": 550
+  },
+  "loewe": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.loewe-uk.com/",
+    "modelCount": 0
+  },
+  "magnavox": {
+    "factoryAuthorized": true,
+    "officialUrl": "http://www.magnavox.com",
+    "modelCount": 251
+  },
+  "mitsubishi": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.mitsubishi.com/e/index.html",
+    "modelCount": 997
+  },
+  "olevia": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.olevia.com/en-us/Home.aspx",
+    "modelCount": 0
+  },
+  "panasonic": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.panasonic.com",
+    "modelCount": 999
+  },
+  "philips": {
+    "factoryAuthorized": true,
+    "officialUrl": "http://www.usa.philips.com/index.page",
+    "modelCount": 975
+  },
+  "pioneer": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.pioneerelectronics.com/PUSA/",
+    "modelCount": 983
+  },
+  "polaroid": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.polaroid.com/us/index.jsp?co=us&bmLocale=en_US",
+    "modelCount": 240
+  },
+  "proscan": {
+    "factoryAuthorized": true,
+    "officialUrl": "http://www.thomson.net/globalenglish/Pages/default.aspx",
+    "modelCount": 3
+  },
+  "rca": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.rca.com",
+    "modelCount": 948
+  },
+  "samsung": {
+    "factoryAuthorized": true,
+    "officialUrl": "http://www.samsung.com",
+    "modelCount": 1414
+  },
+  "sanyo": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.sanyo.com",
+    "modelCount": 1001
+  },
+  "sharp": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.sharpusa.com/",
+    "modelCount": 1073
+  },
+  "sony": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.sony.com",
+    "modelCount": 1660
+  },
+  "sylvania": {
+    "factoryAuthorized": true,
+    "officialUrl": "http://www.sylvaniaconsumerelectronics.com/index.php",
+    "modelCount": 112
+  },
+  "symphonic": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.symphonic.us/",
+    "modelCount": 12
+  },
+  "syntax": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://syntaxbrillian.com/",
+    "modelCount": 0
+  },
+  "toshiba": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.toshiba.com",
+    "modelCount": 998
+  },
+  "viore": {
+    "factoryAuthorized": true,
+    "officialUrl": "http://www.viore.com",
+    "modelCount": 0
+  },
+  "vizio": {
+    "factoryAuthorized": false,
+    "officialUrl": "http://www.vizio.com",
+    "modelCount": 329
+  },
+  "zenith": {
+    "factoryAuthorized": true,
+    "officialUrl": "http://www.zenith.com",
+    "modelCount": 1001
+  }
+}

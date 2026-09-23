@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+/*
+  NY Tech TV Repair design tokens.
+  One accent (cobalt, a modernized version of the original site blue), cool navy neutrals.
+  Light by default, dark when the visitor picks it with the header toggle. No pure black or pure white.
+*/
+:root {
+  --bg: #f5f7fb;
+  --surface: #fbfcfe;
+  --surface-2: #ecf0f7;
+  --ink: #0a1633;
+  --ink-2: #45516e;
+  --ink-3: #5d6884;
+  --line: #d9e0ec;
+  --line-strong: #b9c4d8;
+  --accent: #2350f5;
+  --accent-hover: #1a40d4;
+  --accent-text: #1c44de;
+  --accent-soft: #e3e9fe;
+  --on-accent: #f7f9ff;
+  --navy: #0a1633;
+  --navy-2: #122452;
+  --on-navy: #edf2fc;
+  --on-navy-2: #a9b6d3;
+  --accent-on-dark: #8da5ff;
+  --danger: #b4203a;
+  --danger-soft: #fbe9ec;
+  --success: #117a4b;
+  --success-soft: #e3f4ec;
+  --shadow: 0 1px 2px rgb(10 22 51 / 0.06), 0 12px 32px -12px rgb(10 22 51 / 0.18);
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 80px;
+  --space-9: 96px;
+  color-scheme: light;
+}
+
+/* Dark theme: opt-in via the header toggle (sets data-theme="dark" on <html>). Light is the default. */
+:root[data-theme="dark"] {
+  --bg: #060c1c;
+  --surface: #0b1530;
+  --surface-2: #101d3f;
+  --ink: #e9eef9;
+  --ink-2: #aab5cd;
+  --ink-3: #8f9bb6;
+  --line: #1b2a4f;
+  --line-strong: #2b3d68;
+  --accent: #2f5cff;
+  --accent-hover: #4a70ff;
+  --accent-text: #8da5ff;
+  --accent-soft: #14244f;
+  --on-accent: #f7f9ff;
+  --navy: #0d1b40;
+  --navy-2: #15275a;
+  --on-navy: #edf2fc;
+  --on-navy-2: #a9b6d3;
+  --danger: #ff8394;
+  --danger-soft: #3a1420;
+  --success: #5fd49b;
+  --success-soft: #0f2f22;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 16px 40px -16px rgb(0 0 0 / 0.6);
+  color-scheme: dark;
+}
+
+/* Book a repair always uses the dark palette, even when the rest of the site is light. */
+.book-dark {
+  --bg: #060c1c;
+  --surface: #0b1530;
+  --surface-2: #101d3f;
+  --ink: #e9eef9;
+  --ink-2: #c9d2e6;
+  --ink-3: #b7c2d8;
+  --line: #1b2a4f;
+  --line-strong: #2b3d68;
+  --accent: #2f5cff;
+  --accent-hover: #4a70ff;
+  --accent-text: #8da5ff;
+  --accent-soft: #14244f;
+  --on-accent: #f7f9ff;
+  --navy: #0d1b40;
+  --navy-2: #15275a;
+  --on-navy: #edf2fc;
+  --on-navy-2: #a9b6d3;
+  --danger: #ff8394;
+  --danger-soft: #3a1420;
+  --success: #5fd49b;
+  --success-soft: #0f2f22;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 16px 40px -16px rgb(0 0 0 / 0.6);
+  color-scheme: dark;
+}
+
+/* Light site: booking fields stay white and unused step bars read as grey on the dark card. */
+html:not([data-theme="dark"]) .book-dark :is(input, select, textarea):not([type="checkbox"]):not([type="hidden"]) {
+  background-color: #fff;
+  color: #0a1633;
+}
+html:not([data-theme="dark"]) .book-dark :is(input, textarea)::placeholder {
+  color: #5d6884;
+}
+html:not([data-theme="dark"]) .book-dark .book-progress-empty {
+  background-color: #b7beca;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-text: var(--accent-text);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-navy: var(--navy);
+  --color-navy-2: var(--navy-2);
+  --color-on-navy: var(--on-navy);
+  --color-on-navy-2: var(--on-navy-2);
+  --color-accent-on-dark: var(--accent-on-dark);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 4px;
+  --radius-field: 4px;
+
+  --shadow-card: var(--shadow);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --text-base: 14px;
+  --text-base--line-height: 1.5;
+  --text-lg: 14px;
+  --text-lg--line-height: 1.5;
+  --text-xl: 14px;
+  --text-xl--line-height: 1.5;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 88px;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  /* Native date picker icon follows theme */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.7;
+  }
+  :root[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom utilities (declared with @utility so variants like md: and [&_h2]: work). */
+@utility display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.92;
+}
+@utility display-tight {
+  font-family: var(--font-display);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+@utility wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+@utility container-x {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: var(--space-3);
+  @media (min-width: 768px) {
+    padding-inline: var(--space-4);
+  }
+  @media (min-width: 1280px) {
+    padding-inline: var(--space-5);
+  }
+}
+@utility section-y {
+  padding-block: var(--space-6);
+  @media (min-width: 768px) {
+    padding-block: var(--space-7);
+  }
+}
+@utility page-title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--ink);
+}
+@utility section-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+}
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@layer components {
+  .prose-body p + p {
+    margin-top: 1.1em;
+  }
+}
+
+/* Page-load entrance for the hero. Delay per element via --d. Opacity only — no transform on large layers. */
+@media (prefers-reduced-motion: no-preference) {
+  .enter {
+    animation: enter-fade 0.35s ease-out both;
+    animation-delay: var(--d, 0ms);
+  }
+  .enter-image {
+    animation: enter-fade 0.4s ease-out both;
+    animation-delay: var(--d, 0ms);
+  }
+  .booking-step-enter {
+    animation: booking-step-fade 150ms ease-out both;
+  }
+}
+@keyframes enter-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes booking-step-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@utility defer-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 640px;
+}
